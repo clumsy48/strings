@@ -21,4 +21,6 @@ bool isMatches(string text,string pat){
    }
    return false;
 }
+
+Time complexity : O( (n-m)*m) ~ O(n*m)
 ```
