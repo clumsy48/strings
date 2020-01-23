@@ -2,7 +2,7 @@
 
 Pattern Searching
 
-1) Naiive:
+## 1) Naiive:
 
 ```
 bool isMatches(string text,string pat){
@@ -24,9 +24,9 @@ bool isMatches(string text,string pat){
 
 Time complexity : O( (n-m)*m) ~ O(n*m)
 ```
-2) KMP
+## 2) KMP
 
-**LPS**
+**LPS**. Longest proper prefix which is also a suffix at index i for substring 0 to i
 ```
 vector<int> getLPS(string pattern){
   int len = pattern.length();
