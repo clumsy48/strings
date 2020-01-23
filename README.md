@@ -50,3 +50,28 @@ vector<int> getLPS(string pattern){
     return lps;
 }
 ```
+
+```
+void kmpSearch(string pattern,string text){
+    int tl = text.length();
+    int pl = pattern.length();
+    vector<int> lps = getLPS(pattern);
+    int i=0,j=0;
+    while(i<tl && j<pl){
+        if(pattern[j] == text[i]){
+            i++,j++;
+        }else{
+            if(j!=0){
+                j = lps[j-1];
+            }else{
+                i++;
+            }
+        }
+        if(j==pl){
+            cout << i-1 << " ";
+            j = lps[j-1];
+        }
+    }
+    return ;
+}
+```
